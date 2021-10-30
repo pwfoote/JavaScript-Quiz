@@ -1,30 +1,76 @@
-#quizBox {
-    position: absolute;
-    left: 30%;
-    top: 20%;
-    width: 500px;
-    height: 500px;
-    border: 1px solid black;
+*, * ::before, * ::after {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
-#startTimer {
-    border: solid;
-    border-color: green;
-    padding: 10px 15px;
-    color: tomato;
+:root {
+    --hue-neutral: 200;
+   
 }
 
-#questions {
-    margin: 15px;
+body {
+    --hue: var(--hue-nuetral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-content: center;
+    background-color: hsl(var(--hue), 100%, 20%);
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-#countdown {
-    float: right
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
 }
 
-button {
-border-radius: 8px;
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px p;
 }
 
+.btn {
+    --hue: var(--hue-nuetral);
+    border: 1px solid black ;
+    background-color: dimgray;
+    border-radius: 5px;
+    padding: 5px 1px;
+    outline: none;
 
+}
 
+.btn:hover{
+    background-color: blueviolet;
+}
+
+.correct {
+background-color: green;
+}
+
+.wrong {
+    background-color: red;
+}
+
+.start-btn, .next-btn {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
