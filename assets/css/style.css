@@ -74,3 +74,18 @@ background-color: green;
 .hide {
     display: none;
 }
+
+.quizTimer {
+    float: right;
+    margin: -25px 20px;
+}
+
+.quizTop {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.score{
+    float: left;
+    margin-right: 25px;
+}
