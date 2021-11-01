@@ -5,6 +5,7 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
+
 let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startGame)
@@ -81,29 +82,93 @@ function clearStatusClass(element) {
 
 const questions = [
     {
-        question: 'choose answer 1',
+        question: 'Commonly used data types DO NOT include:',
         answers: [
-            {text: '1', correct: true},
-            {text: '2', correct: false},
-            {text: '3', correct:false},
-            {text: '4', correct: false}
+            {text: 'alerts', correct: true},
+            {text: 'booleans', correct: false},
+            {text: 'numbers', correct:false},
+            {text: 'strings', correct: false}
 
         ]
     },
 
     {
-        question: 'choose answer 2',
+        question: 'The condition in an if / else statement is enclosed with ___.',
         answers: [
-            {text: '1', correct: false},
-            {text: '2', correct: true},
-            {text: '3', correct:false},
-            {text: '4', correct: false}
+            {text: 'quotes', correct: false},
+            {text: 'parentheses', correct: true},
+            {text: 'culry brackets', correct:false},
+            {text: 'square brackets', correct: false}
 
         ]
     },
-]
+
+    {
+        question: 'Arrays in Javascript can be used to store ____.',
+        answers: [
+            {text: 'other arrays', correct: false},
+            {text: 'booleans', correct: false},
+            {text: 'numbers and strings', correct:false},
+            {text: 'all of the above', correct: true}
+
+        ]
+    },
+
+    {
+        question: 'String Values must be enclosed within ____ when being assigned to variables.',
+        answers: [
+            {text: 'commas', correct: false},
+            {text: 'curly brackets', correct: false},
+            {text: 'quotes', correct:false},
+            {text: 'parentheses', correct: true}
+
+        ]
+    },
+
+    {
+        question: 'Avery useful tool used during development and debugging is to print content to the ____',
+        answers: [
+            {text: 'terminal', correct: false},
+            {text: 'CSS file', correct: false},
+            {text: 'gitHub', correct:false},
+            {text: 'console log', correct: true}
+
+        ]
+    },
+
+    {
+        question: 'Is JavaScript hard?',
+        answers: [
+            {text: 'yes', correct: true},
+            {text: 'yes', correct: true},
+            {text: 'yes', correct:true},
+            {text: 'yes', correct: true}
+
+        ]
+    }
+];
 
 
-//create timer and deduction points
-//end of quiz eneter high score
+const quizTimer = document.querySelector('h3');
+let timeLeft = 75;
+quizTimer.addEventListener('click', displayTime)
+displayTime(timeLeft)
+const countDown = setInterval (()=>{
+    timeLeft--;
+    quizTimer.innerHTML = `00:${timeLeft}`;
+    if(timeLeft <= 0 || timeLeft < 1) {
+        endtime();
+        clearInterval(countDown);
+    }
+},1000)
 
+
+function displayTime (second){
+   const min = Math.floor(second / 60);
+   const sec = Math.floor(second % 60);
+   quizTimer.innderHTML = `${min,10 ? '0': ''}${min}:${sec<10 ? '0':''}${sec}`
+}
+
+function endtime(){
+    quizTimer.innerHTML = 'Times Up!'
+}
