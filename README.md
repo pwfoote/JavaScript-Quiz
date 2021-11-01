@@ -46,4 +46,6 @@ THEN I can save my initials and score"
 -'Score' must be able to be logged to local storage and Initialed by user.
 
 # Screen Shots
-[./images/quiz.SS.01]
+![image](ChallengeAssignments/JavaScript-Quiz/assets/images/quiz.SS.01)
+![image](ChallengeAssignments/JavaScript-Quiz/assets/images/quiz.SS.02)
+![image](ChallengeAssignments/JavaScript-Quiz/assets/images/quiz.SS.03)
