@@ -1,5 +1,10 @@
 # JavaScript-Quiz
 
+## URLs
+repo : https://github.com/pwfoote/JavaScript-Quiz
+
+deployed URL: https://pwfoote.github.io/JavaScript-Quiz/
+
 **This is an incomplete project, and is still subject to change.**
 This project is for the JavaScript Quiz Challenge for Module Four.  
 
@@ -32,7 +37,7 @@ THEN I can save my initials and score"
 ## Developer Notes
 -initial step was to structure the questions.
 -once questions were structured, functions were created to prompt questions.
--after questions were appending to screen, CSS was modified to to color answer buttons.
+-after questions were appending to screen, CSS was modified to to color answer buttons:
 -answer buttons were given hover properties to change color;
     -correct answers will turn green.
     -wrong answers will turn red.
@@ -44,8 +49,12 @@ THEN I can save my initials and score"
 -points need to be dedcuted for choosing 'Wrong' answer.
 -points need to be added for amount of time left for finishing quiz before timer stops.
 -'Score' must be able to be logged to local storage and Initialed by user.
+-message to inform user they have completed the quiz
+
 
 # Screen Shots
 ![image](https://github.com/pwfoote/JavaScript-Quiz/blob/main/assets/images/quiz.SS.02.png)
 ![image](https://github.com/pwfoote/JavaScript-Quiz/blob/main/assets/images/quiz.SS.01.png)
 ![image](https://github.com/pwfoote/JavaScript-Quiz/blob/main/assets/images/quiz.SS.03.png)
+
+01000110 01001100 00101101 01010101 01010010
